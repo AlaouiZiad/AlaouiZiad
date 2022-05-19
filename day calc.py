@@ -20,9 +20,15 @@ def isitleap(year):
             return True
         else:
             return False            
-def prosses():
-    x=input()
-    if x=='day':
+print('Need help?')
+bool=input('Answer=')
+if bool=='Yes'or'yes':
+    print('Warning:this page shown only once''Or type day diffrent for calculating the diffrent bettween two given dates')
+    print('Type day for calculating which day of the week matches the given date')
+    print('Or type day diffrent for calculating the diffrent bettween two given dates')
+while True:
+    mode=input()
+    if mode=='day':
         day=int(input('day:'))
         month=int(input('month:'))
         year=int(input('year:'))
@@ -32,7 +38,7 @@ def prosses():
                 d-=1
             return d
         print(daysofweek[d(year,month,day) % 7])    
-    if x=='day calc':
+    if mode=='day diffrent':
         day=int(input('day:'))
         month=int(input('month:'))
         year=int(input('year:'))
@@ -43,10 +49,7 @@ def prosses():
         if e<0:
             e=-e
         print(e)
-    y=input()         
-    if y=='':
-        prosses()
-prosses()
+
 
 
 
